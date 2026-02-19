@@ -50,7 +50,8 @@ Email_Events
 | action      | Email action (sent, opened, clicked, etc.) | VARCHAR   |
 | user_type   | Type of user interaction                   | VARCHAR   |
 
-##Approach Used
+
+## Approach Used
 1. Data Preparation
 
 1.Created database and imported all CSV files (job_data, users, events, email_events).
@@ -77,34 +78,45 @@ Case Study 2 – Metric Spike Investigation
 2.Compared short-term vs rolling averages to explain metric spikes.
 3.Delivered actionable insights to support operational and product decisions.
 
-##Questions to Answer
+## Questions to Answer
 Case Study 1: Job Data Analysis
+
 A.Jobs Reviewed Over Time:
+
 Your Task: Write an SQL query to calculate the number of jobs reviewed per hour for each day in November 2020.
 
 B.Throughput Analysis:
+
 Your Task: Write an SQL query to calculate the 7-day rolling average of throughput. Additionally, explain whether you prefer using the daily metric or the 7-day rolling average for throughput, and why.
 
 C.Language Share Analysis:
+
 Your Task: Write an SQL query to calculate the percentage share of each language over the last 30 days.
 
 D.Duplicate Rows Detection:
+
 Your Task: Write an SQL query to display duplicate rows from the job_data table.
 
 Case Study 2: Investigating Metric Spike
+
 A.Weekly User Engagement:
+
 Your Task: Write an SQL query to calculate the weekly user engagement.
 
 B.User Growth Analysis:
+
 Your Task: Write an SQL query to calculate the user growth for the product.
 
 C.Weekly Retention Analysis:
+
 Your Task: Write an SQL query to calculate the weekly retention of users based on their sign-up cohort.
 
 D.Weekly Engagement Per Device:
+
 Your Task: Write an SQL query to calculate the weekly engagement per device.
 
 E.Email Engagement Analysis:
+
 Your Task: Write an SQL query to calculate the email engagement metrics.
 
 
