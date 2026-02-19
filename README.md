@@ -73,7 +73,7 @@ Case Study 2 – Metric Spike Investigation
 4.Evaluated weekly engagement by device type.
 5.Calculated email engagement metrics (sent, opened, clicked).
 
-3. Insight Generation
+Insight Generation
 1.Interpreted trends and anomalies in key metrics.
 2.Compared short-term vs rolling averages to explain metric spikes.
 3.Delivered actionable insights to support operational and product decisions.
@@ -81,43 +81,25 @@ Case Study 2 – Metric Spike Investigation
 ## Questions to Answer
 Case Study 1: Job Data Analysis
 
-A.Jobs Reviewed Over Time:
+A.Jobs Reviewed Over Time: Write an SQL query to calculate the number of jobs reviewed per hour for each day in November 2020.
 
-Your Task: Write an SQL query to calculate the number of jobs reviewed per hour for each day in November 2020.
+B.Throughput Analysis: Write an SQL query to calculate the 7-day rolling average of throughput. Additionally, explain whether you prefer using the daily metric or the 7-day rolling average for throughput, and why.
 
-B.Throughput Analysis:
+C.Language Share Analysis: Write an SQL query to calculate the percentage share of each language over the last 30 days.
 
-Your Task: Write an SQL query to calculate the 7-day rolling average of throughput. Additionally, explain whether you prefer using the daily metric or the 7-day rolling average for throughput, and why.
-
-C.Language Share Analysis:
-
-Your Task: Write an SQL query to calculate the percentage share of each language over the last 30 days.
-
-D.Duplicate Rows Detection:
-
-Your Task: Write an SQL query to display duplicate rows from the job_data table.
+D.Duplicate Rows Detection: Write an SQL query to display duplicate rows from the job_data table.
 
 Case Study 2: Investigating Metric Spike
 
-A.Weekly User Engagement:
+A.Weekly User Engagement: Write an SQL query to calculate the weekly user engagement.
 
-Your Task: Write an SQL query to calculate the weekly user engagement.
+B.User Growth Analysis: Write an SQL query to calculate the user growth for the product.
 
-B.User Growth Analysis:
+C.Weekly Retention Analysis: Write an SQL query to calculate the weekly retention of users based on their sign-up cohort.
 
-Your Task: Write an SQL query to calculate the user growth for the product.
+D.Weekly Engagement Per Device: Write an SQL query to calculate the weekly engagement per device.
 
-C.Weekly Retention Analysis:
-
-Your Task: Write an SQL query to calculate the weekly retention of users based on their sign-up cohort.
-
-D.Weekly Engagement Per Device:
-
-Your Task: Write an SQL query to calculate the weekly engagement per device.
-
-E.Email Engagement Analysis:
-
-Your Task: Write an SQL query to calculate the email engagement metrics.
+E.Email Engagement Analysis: Write an SQL query to calculate the email engagement metrics.
 
 
 
