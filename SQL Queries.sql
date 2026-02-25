@@ -1,4 +1,85 @@
+CREATE DATABASE project3;
+SHOW databases;
+USE project3;
+
+# table-1 users
+
+CREATE TABLE users (
+user_id int, 
+created_at varchar(50),
+compant_id int,
+language varchar(50),
+activated_at varchar(100), 
+state varchar(50));
+
+SHOW VARIABLES LIKE 'secure_file_priv';
+
+LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/users.csv"
+INTO TABLE users
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+select * from users;
+
+alter table users add column temp_created_at datetime;
+
+UPDATE users SET temp_created_at = str_to_date(created_at, '%d-%m-%Y %H:%i');
+
+ALTER TABLE users DROP COLUMN created_at;
+
+ALTER TABLE	users CHANGE COLUMN temp_created_at created_at DATETIME;
+
+# table-2 events
+CREATE TABLE events (
+user_id int null, 
+occurred_at varchar(100),
+event_type varchar(50),
+event_name varchar(100) ,
+location varchar(50), 
+device varchar(50),
+user_type INT);
+
+LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/events.csv"
+INTO TABLE events
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+desc events;
+
+select * from events;
+
+alter table events add column temp_occurred_at datetime;
+
+UPDATE events SET temp_occurred_at = str_to_date(occurred_at, '%d-%m-%Y %H:%i');
+
+ALTER TABLE events DROP COLUMN occurred_at;
+
+ALTER TABLE	events CHANGE COLUMN temp_occurred_at occurred_at DATETIME;
+
+# table-3 email-events
+
+CREATE TABLE emailevents(
+user_id int, 
+occurred_at varchar(100),
+action varchar(100),
+user_type INT
+);
+
+LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/email_events.csv"
+INTO TABLE emailevents
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+select * from emailevents;
+
 -----------------Exploratory Data Analysis (EDA)--------------------
+
 --Case Study 1: Job Data Analysis--
 
 -- A.Jobs Reviewed Over Time: Write an SQL query to calculate the number of jobs reviewed per hour for each day in November 2020.
